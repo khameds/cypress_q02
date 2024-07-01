@@ -24,6 +24,24 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('createNote', (token, title, desc, category) => {
+  cy.log("Note creation token : " + token);
+  cy.request({
+    url: Cypress.env("noteApiBaseUrl") + "/notes",
+    method: "POST",
+    headers: {
+      "x-auth-token" : token, 
+    },
+    body: {
+      "title": title,
+      "description": desc,
+      "category": category,
+    },
+  }).then((response) => {
+    cy.wrap(response);
+  });
+});
+
 Cypress.Commands.add(
     "generateRandomEmail",
     () => `${Math.random().toString(36).substring(2, 12)}@yahoo.com`

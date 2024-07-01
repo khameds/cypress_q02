@@ -1,2 +1,3 @@
 # cypress_q02
-Test backmarket front
+- Quete 2 : Test backmarket front
+- Quete 3 : Test d'API
