@@ -23,6 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import 'cypress-file-upload'
+require('cypress-downloadfile/lib/downloadFileCommand')
 
 Cypress.Commands.add('createNote', (token, title, desc, category) => {
   cy.log("Note creation token : " + token);
