@@ -14,7 +14,8 @@
     "@faker-js/faker": "^8.4.1",
     "cypress": "^13.12.0",
     "cypress-downloadfile": "^1.2.4",
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.2"
   },
   "dependencies": {
     "mysql": "github:mysqljs/mysql"

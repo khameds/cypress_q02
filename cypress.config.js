@@ -9,6 +9,13 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       on('task', {downloadFile})
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
+  },
+  reporter: "cypress-mochawesome-reporter", 
+  reporterOptions: {
+    reportFilename: "quest-report.html",
+    reportPageTitle: "My quest's report",
+    saveAllAttempts: false,
   },
 });
