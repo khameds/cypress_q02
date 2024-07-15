@@ -31,5 +31,5 @@ jobs:
       env:
         PERCY_TOKEN: $
 
-    - name: Run Cypress tests
-      run: npm run cy:run
+    - name: Run Cypress tests with percy
+      run: npm run percy
