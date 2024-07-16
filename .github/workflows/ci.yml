@@ -27,7 +27,7 @@ jobs:
     - name: Install percy 
       run:  |
         npm install --save-dev @percy/cli
-        npx percy snapshot _site/
+        npx percy snapshot public/
       env:
         PERCY_TOKEN: $
 
